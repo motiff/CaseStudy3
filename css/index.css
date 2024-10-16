@@ -60,6 +60,12 @@ h3{
   font-style: italic;
   padding: 5%;
 }
+.card-header-text{
+  margin: auto;
+  padding: 1%;
+  font-weight: 400;
+  font-size: 18px;
+}
 .slideimage{
   max-width: 85%;
   margin: auto;
