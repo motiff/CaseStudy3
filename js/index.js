@@ -33,18 +33,18 @@ $( window ).on( "resize", function() {
 } );
 
 
-// window.addEventListener("scroll", function() {
-//     const lastElement = document.getElementById("item-6")
-//     // this makes the last item get marked as active
+window.addEventListener("scroll", function() {
+    const lastElement = document.getElementById("item-6")
+    // this makes the last item get marked as active
 
-//     const lastItemIsActive = ($(window).scrollTop() >= $(document).height() - $(window).height() - lastElement.offsetHeight)
-//     console.log($(window).scrollTop(),">=",$(document).height(),"-",$(window).height(),"-",lastElement.offsetHeight, lastItemIsActive)
-//     if(lastItemIsActive){
-//         console.log("setting it as active");
-//         $( "#conclusion" ).addClass("active");
-//         $( "#nextsteps" ).addClass("active");
-//     }
-// });
+    const lastItemIsActive = ($(window).scrollTop() >= $(document).height() - $(window).height() - lastElement.offsetHeight)
+    console.log($(window).scrollTop(),">=",$(document).height(),"-",$(window).height(),"-",lastElement.offsetHeight, lastItemIsActive)
+    if(lastItemIsActive){
+        console.log("setting it as active");
+        $( "#conclusion" ).addClass("active");
+        $( "#nextsteps" ).addClass("active");
+    }
+});
 
 // firstScrollSpyEl.addEventListener('activate.bs.scrollspy', () => {
 //     $(".groupnav").each(function(){

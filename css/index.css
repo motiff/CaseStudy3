@@ -1,12 +1,8 @@
 body{  
   overflow-x: unset;
   font-family: Roboto, sans-serif;
-}
-/* .scrollspy-example{
   display: flow-root;
-  position: relative;
-  height: min-content;
-} */
+}
 .fill{
   background-image: url("../images/banner_hh.png");
   background-repeat: no-repeat;
@@ -92,10 +88,20 @@ h3{
 .blockquote-footer{
   margin-top: auto;
 }
+.button-link{
+  text-decoration: none !important;
+}
 .prototypebutton{
   margin-left: auto;
   margin-right: auto;
   display: block;
+  background-color: #6e64ff;
+  border: 2px solid #6e64ff !important;
+}
+.prototypebutton:hover{
+  background-color: white;
+  color: #6e64ff;
+  border: 2px solid #6e64ff !important;
 }
 .figure{
   margin-bottom: 5px;
@@ -108,4 +114,10 @@ figcaption{
 }
 .container-fluid{
   padding: 0;
+}
+/* tablet */
+@media only screen and (max-width:1179px){
+  .sidebar{
+    visibility: hidden;
+  }
 }
