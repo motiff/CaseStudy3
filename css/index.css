@@ -54,6 +54,9 @@ body{
 .sidecol{
   display: unset;
 }
+.content-wrapper {
+  margin: 0 auto 0 auto;
+}
 h4{
   font-weight: bold;
   margin-top: 20px;

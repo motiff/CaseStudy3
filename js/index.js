@@ -7,20 +7,44 @@ firstScrollSpyEl.addEventListener('activate.bs.scrollspy', () => {
     if (($(this).children().hasClass("active"))){
         // $(this).find(".main-ul").css("text-decoration", "underline");
         $(this).find(".subgroup-ul").css("display", "block");
-        console.log("if triggered");
+        // console.log("if triggered");
     }
     else{
         // $(this).find(".main-ul").css("text-decoration", "none");
         $(this).find(".subgroup-ul").css("display", "none");
-        console.log("else triggered");
+        // console.log("else triggered");
     }
+
     });
 })
-window.addEventListener("scroll", function() {
-    if($(window).scrollTop() >= $(document).height() - $(window).height() - 300){
-        $( "#nextsteps" ).addClass("active");
+
+
+$( window ).on( "resize", function() {
+    const maxwidth=960;
+    const breakpoint=1336;
+    console.log($(window).width())
+    if ($(window).width()>breakpoint) {
+        $(".content-wrapper").width(maxwidth)
+        // console.log($(".content-wrapper"))
+    } else {
+        $(".content-wrapper").width($(window).width()*.65)
+        
     }
-});
+} );
+
+
+// window.addEventListener("scroll", function() {
+//     const lastElement = document.getElementById("item-6")
+//     // this makes the last item get marked as active
+
+//     const lastItemIsActive = ($(window).scrollTop() >= $(document).height() - $(window).height() - lastElement.offsetHeight)
+//     console.log($(window).scrollTop(),">=",$(document).height(),"-",$(window).height(),"-",lastElement.offsetHeight, lastItemIsActive)
+//     if(lastItemIsActive){
+//         console.log("setting it as active");
+//         $( "#conclusion" ).addClass("active");
+//         $( "#nextsteps" ).addClass("active");
+//     }
+// });
 
 // firstScrollSpyEl.addEventListener('activate.bs.scrollspy', () => {
 //     $(".groupnav").each(function(){
