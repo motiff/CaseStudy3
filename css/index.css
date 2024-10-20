@@ -1,7 +1,12 @@
-body{
+body{  
   overflow-x: unset;
   font-family: Roboto, sans-serif;
 }
+/* .scrollspy-example{
+  display: flow-root;
+  position: relative;
+  height: min-content;
+} */
 .fill{
   background-image: url("../images/banner_hh.png");
   background-repeat: no-repeat;
@@ -84,7 +89,7 @@ h3{
 .blockquote-footer{
   margin-top: auto;
 }
-.prototypebutton2{
+.prototypebutton{
   margin-left: auto;
   margin-right: auto;
   display: block;

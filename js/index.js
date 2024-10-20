@@ -1,17 +1,34 @@
 console.log("javascript loaded.");
 const firstScrollSpyEl = document.querySelector('[data-bs-spy="scroll"]')
+
+
 firstScrollSpyEl.addEventListener('activate.bs.scrollspy', () => {
     $(".groupnav").each(function(){
     if (($(this).children().hasClass("active"))){
+        // $(this).find(".main-ul").css("text-decoration", "underline");
         $(this).find(".subgroup-ul").css("display", "block");
         console.log("if triggered");
     }
     else{
+        // $(this).find(".main-ul").css("text-decoration", "none");
         $(this).find(".subgroup-ul").css("display", "none");
         console.log("else triggered");
     }
     });
 })
+window.addEventListener("scroll", function() {
+    if($(window).scrollTop() >= $(document).height() - $(window).height() - 300){
+        $( "#nextsteps" ).addClass("active");
+    }
+});
+
+// firstScrollSpyEl.addEventListener('activate.bs.scrollspy', () => {
+//     $(".groupnav").each(function(){
+//     if (($(this).children().hasClass("active"))){
+//         $(this).find(".main-ul").addClass("active");
+//     }
+//     });
+// })
 
 // var dataSpyList = [].slice.call(document.querySelectorAll('[data-bs-spy="scroll"]'))
 // dataSpyList.forEach(function (dataSpyEl) {
