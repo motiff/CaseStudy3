@@ -1,16 +1,21 @@
 console.log("javascript loaded.");
+
+document.querySelectorAll('.lightbox').forEach((el) => el.addEventListener('click', (e) => {
+	e.preventDefault();
+	const lightbox = new Lightbox(el, options);
+	lightbox.show();
+}));
+
 const firstScrollSpyEl = document.querySelector('[data-bs-spy="scroll"]')
 
 
 firstScrollSpyEl.addEventListener('activate.bs.scrollspy', () => {
     $(".groupnav").each(function(){
     if (($(this).children().hasClass("active"))){
-        // $(this).find(".main-ul").css("text-decoration", "underline");
         $(this).find(".subgroup-ul").css("display", "block");
         // console.log("if triggered");
     }
     else{
-        // $(this).find(".main-ul").css("text-decoration", "none");
         $(this).find(".subgroup-ul").css("display", "none");
         // console.log("else triggered");
     }
@@ -45,6 +50,7 @@ window.addEventListener("scroll", function() {
         $( "#nextsteps" ).addClass("active");
     }
 });
+
 
 // firstScrollSpyEl.addEventListener('activate.bs.scrollspy', () => {
 //     $(".groupnav").each(function(){
